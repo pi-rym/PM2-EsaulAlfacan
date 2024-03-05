@@ -1,0 +1,294 @@
+:root {
+  --color_black: #000000;
+  --color_yellow: #d4af37;
+  --color_red: #9d292d;
+  --color_white: #ffffff;
+  --color_darkgrey: #1a1a1a;
+  --font-primary: "Roboto Slab", serif;
+  --font-secundary: "Roboto Condensed", sans-serif;
+  --font-text: "Open Sans", sans-serif;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  color: var(--color_white);
+  background-color: var(--color_black);
+}
+
+/* Styles of header xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: center;
+  background-image: url(/front/assets/images/index/header_zombies.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__inner {
+  width: 60%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header__info {
+  position: block;
+  margin: auto auto;
+  padding: 0 3rem;
+}
+
+.header__title {
+  margin: 0 0 10px;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+  color: var(--color_yellow);
+  font-family: var(--font-primary);
+  font-weight: 900;
+  font-size: 3.5em;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.header__description {
+  margin: 0 0 20px;
+  padding: 0 2rem;
+  color: var(--color_white);
+  font-family: var(--font-primary);
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.73);
+}
+
+.navigation__item {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+}
+
+.navigation__link {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8em;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color_red);
+  font-family: var(--font-secundary);
+  transition: color 0.3s ease;
+  border: rgba(255, 255, 255, 0.1) solid 1px;
+  padding: 2.5px;
+}
+
+.navigation__link img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  height: 60px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, visibility 0s ease 1s, transform 1s ease;
+  z-index: -1;
+}
+
+.navigation__link:hover img {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  font-size: 1.8em;
+  color: var(--color_black);
+  font-weight: 900;
+  transform: translateY(-2px);
+  height: 6rem;
+}
+
+.navigation__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--color_red);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out, height 0.5s ease;
+}
+
+.navigation__link:hover::after,
+.navigation__link:focus::after {
+  transform: scaleX(1.3);
+  height: 5px;
+}
+
+/*STYLES OF burguer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+.menu {
+  width: 100%;
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu__logo {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.menu__name {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  margin-left: 5px;
+  font-size: 2em;
+}
+
+.menu__img {
+  height: 55px;
+  border-radius: 50%;
+}
+
+.burguer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.burguer__open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.burguer__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.burguer__menu {
+  display: none;
+  font-family: var(--font-secundary);
+  font-size: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-decoration: none;
+  list-style: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/*STYLES OF main XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/*styles of movies__other xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+.movies__others {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.movie__card {
+  position: relative;
+  width: 22rem;
+  height: 31rem;
+  border-radius: 8px;
+  box-shadow: 0 12px 16px rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: solid var(--color_white) 1px;
+}
+
+.movie__data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+}
+
+.movie__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+  color: var(--color_white);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 16px;
+  font-family: var(--font-primary);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.movie__info {
+  font-weight: 600;
+  font-family: var(--font-text);
+  color: var(--color_white);
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.movie__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

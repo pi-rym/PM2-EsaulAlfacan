@@ -1,0 +1,224 @@
+/* Optimized Advanced Reset CSS */
+/* Combines resets for consistency across all browsers with improvements for accessibility, usability, and modern web standards. */
+
+/* Universal Box-sizing */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Reset all elements to remove margins, paddings, and borders */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset and block styling for newer semantic elements */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* Body line-height and font-family for improved readability */
+body {
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* List style reset */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Blockquote and quotes reset */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Table border reset for consistency */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset text sizing and prevent mobile browsers from adjusting text size */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Focus outline reset for custom focus styles (ensure accessibility) */
+*:focus {
+  outline: none;
+}
+
+/* Form elements reset for better control */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+/* Remove default button and fieldset styles */
+button,
+input,
+select {
+  overflow: visible;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* Adjust clickable area for checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  box-shadow: inset 0 0 0 white;
+}
+
+/* Reset anchor elements */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style adjustments for hr, summary, and hidden attribute */
+hr,
+summary {
+  box-sizing: content-box;
+  overflow: visible;
+}
+summary {
+  display: list-item;
+}
+[hidden] {
+  display: none;
+}
+
+/* Enhance accessibility for interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  cursor: pointer;
+}
