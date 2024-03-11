@@ -5,14 +5,14 @@ $.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
   const DATA = data;
 
   //Create a execution code for the map method
-  data.map((movie) => {
+  DATA.map((movie) => {
     //Step 1: create a container to mavie information
     const CARD_MOVIE = document.createElement("div");
     CARD_MOVIE.classList.add("movie__card");
 
     //Step 2: create a element to capture the information of the objetc movie
     const CARD__DATA = document.createElement("div");
-    CARD__DATA.classList.add = "movie__data";
+    (CARD__DATA.classList.add = "movie__data"), "card-body";
     // Title and your class
     const CARD__TITLE = document.createElement("h4");
     CARD__TITLE.classList.add("movie__title");

@@ -17,6 +17,22 @@ body {
   background-color: var(--color_black);
 }
 
+/*Styles od bootstrap modified xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 0 !important;
+}
+
+.btn {
+  background-color: var(--color_yellow) !important;
+  border: solid 0.5px var(--color_darkgrey) !important;
+  color: var(--color_darkgrey) !important;
+}
+
 /* Styles of header xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 .header {
@@ -74,19 +90,25 @@ body {
   align-items: center;
   width: 50%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.73);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation__item {
   width: 100%;
   height: auto;
-  padding: 1rem 0;
+  margin: 1rem;
 }
 
 .navigation__link {
   display: flex;
   flex-direction: column;
-  font-size: 1.8em;
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -94,6 +116,7 @@ body {
   font-family: var(--font-secundary);
   transition: color 0.3s ease;
   border: rgba(255, 255, 255, 0.1) solid 1px;
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 2.5px;
 }
 
@@ -101,10 +124,10 @@ body {
   position: absolute;
   width: 100%;
   object-fit: cover;
-  height: 60px;
+  height: 150%;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
+  transform: translateY(-1px);
   transition: opacity 1s ease, visibility 0s ease 1s, transform 1s ease;
   z-index: -1;
 }
@@ -112,17 +135,16 @@ body {
 .navigation__link:hover img {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
   transition-delay: 0s;
+  height: 4rem;
 }
 
 .navigation__link:hover,
 .navigation__link:focus {
-  font-size: 1.8em;
   color: var(--color_black);
   font-weight: 900;
   transform: translateY(-2px);
-  height: 6rem;
+  height: auto;
 }
 
 .navigation__link::after {
@@ -145,17 +167,6 @@ body {
 
 /*STYLES OF burguer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-.menu {
-  width: 100%;
-  height: 65px;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .menu__logo {
   display: flex;
   flex-direction: row-reverse;
@@ -176,48 +187,10 @@ body {
   border-radius: 50%;
 }
 
-.burguer {
-  position: relative;
-  z-index: 1;
-  display: flex;
-}
-.burguer__open {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  padding: 0 10px;
-  cursor: pointer;
+.navbar1 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
-.burguer__close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-.burguer__menu {
-  display: none;
-  font-family: var(--font-secundary);
-  font-size: 2em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  text-decoration: none;
-  list-style: none;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.95);
-}
-
-/*STYLES OF main XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /*styles of movies__other xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 .movies__others {
   display: flex;
@@ -291,4 +264,30 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .navigation__list {
+    display: none !important;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) {
 }
