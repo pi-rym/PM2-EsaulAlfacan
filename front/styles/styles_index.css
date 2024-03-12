@@ -48,7 +48,6 @@ body {
 }
 
 .header__inner {
-  width: 60%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -59,28 +58,20 @@ body {
 .header__info {
   position: block;
   margin: auto auto;
-  padding: 0 3rem;
 }
 
 .header__title {
-  margin: 0 0 10px;
-  padding: 0 2rem;
-  margin-bottom: 3rem;
   color: var(--color_yellow);
   font-family: var(--font-primary);
   font-weight: 900;
-  font-size: 3.5em;
   letter-spacing: 2px;
   text-align: left;
 }
 
 .header__description {
-  margin: 0 0 20px;
-  padding: 0 2rem;
   color: var(--color_white);
   font-family: var(--font-primary);
   font-size: 1.5em;
-  letter-spacing: 1.5px;
   text-align: left;
 }
 
@@ -103,10 +94,11 @@ body {
 .navigation__item {
   width: 100%;
   height: auto;
-  margin: 1rem;
 }
 
 .navigation__link {
+  border-radius: 5px;
+  margin: 2px !important;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -117,33 +109,31 @@ body {
   transition: color 0.3s ease;
   border: rgba(255, 255, 255, 0.1) solid 1px;
   background-color: rgba(255, 255, 255, 0.7);
-  padding: 2.5px;
+  padding: 2px;
 }
 
-.navigation__link img {
+.navigation__item img {
   position: absolute;
   width: 100%;
-  object-fit: cover;
-  height: 150%;
+  object-fit: contain;
+  object-position: center;
+  height: auto;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-1px);
   transition: opacity 1s ease, visibility 0s ease 1s, transform 1s ease;
   z-index: -1;
 }
 
-.navigation__link:hover img {
+.navigation__item:hover {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
-  height: 4rem;
 }
 
 .navigation__link:hover,
 .navigation__link:focus {
   color: var(--color_black);
   font-weight: 900;
-  transform: translateY(-2px);
   height: auto;
 }
 
@@ -271,7 +261,6 @@ body {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-
 }
 
 /* // Medium devices (tablets, 768px and up) */
