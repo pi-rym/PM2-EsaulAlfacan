@@ -1,14 +1,13 @@
-// Importación de express
-const express = require("express");
+const EXPRESS = require("express");
+const MORGAN = require("morgan");
+const CORS = require("cors");
+const ROUTER = require("./routes/index_r");
 
-// Importación del router del archivo server de services
-const router = require("./routes/index");
+const APP = EXPRESS();
 
-// Asignacion de las funcinoalidades de express a una variable
-const server = express();
+APP.use(MORGAN("dev"));
+APP.use(CORS());
+APP.use(EXPRESS.json());
+APP.use(ROUTER);
 
-// Implementacion de router (conexión)
-server.use(router);
-
-// Exportacion de la variable que contiene a express
-module.exports = server;
+module.exports = APP;

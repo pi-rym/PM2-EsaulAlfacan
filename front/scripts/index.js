@@ -1,3 +1,6 @@
+require("dotenv").config();
+
+const { HOST, PORT } = process.env;
 // Importación del módulo renderCard desde el archivo renderCard.js
 const renderCard = require("./renderCard");
 // Importación del módulo axios
@@ -8,9 +11,7 @@ const fGetAxios = async (data) => {
   // Control del flujo de la solicitud con axios
   try {
     // Petición a el servidor
-    const peticion = await axios.get(
-      "https://students-api.up.railway.app/movies"
-    );
+    const peticion = await axios.get(`http://${HOST}:${PORT}/movies`);
 
     // Validación para una petición exitosa
     if (peticion.status === 200) {
